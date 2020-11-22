@@ -1,5 +1,5 @@
-class ProjectSerializer
-  include JSONAPI::Serializer
+class ProjectSerializer< ActiveModel::Serializer
+  # include JSONAPI::Serializer
   attributes :id, :title, :subtitle, :description, :project_links
 
   # attribute :project_links do |obj|
