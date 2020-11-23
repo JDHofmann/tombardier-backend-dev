@@ -18,9 +18,10 @@ class UserSerializer< ActiveModel::Serializer
         }
       end
       imageArray = p.project_images.map do |pi|
+        image = rails_blob_path(pi.image, only_path: true)
         {
-          image_caption: pi.image_caption
-          # grab blob url here too
+          image_caption: pi.image_caption,
+          image: image
         }
       end 
       {
@@ -37,7 +38,8 @@ class UserSerializer< ActiveModel::Serializer
   def user_links 
     self.object.user_links.map do |ul|
       {
-        link_text: ul.link_text
+        link_text: ul.link_text,
+        link_url: ul.link_url
       }
     end 
   end
