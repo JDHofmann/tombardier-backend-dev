@@ -27,6 +27,6 @@ class ProjectImagesController < ApplicationController
     private 
 
     def pi_params
-        params.require(:project_image).permit(:image_caption, :image)
+        params.require(:project_image).permit!
     end 
 end
