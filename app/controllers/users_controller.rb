@@ -21,4 +21,30 @@ class UsersController < ApplicationController
 
         # render json: json_string
     end 
+
+    def update 
+        user = User.all.find(params[:id])
+        user.update(user_params)
+
+            # purge if a link already exists and the params contain a new picture
+            # image = rails_blob_path(user.image)
+            # byebug
+        # if params[:image] && event.url
+        #     event.image.purge
+        # end
+    
+        # if event.update(params)
+        #     if params[:image]
+        #     event.update(url: event.image.url)
+        #     end
+        #     # render json: event, status: :ok
+        # end
+        render json: user
+    end 
+
+    # private 
+
+    def user_params 
+        params.require(:user).permit(:site_title, :site_subtitle, :bio, :description, :contact_email, :image)
+    end 
 end
