@@ -21,7 +21,8 @@ class UserSerializer< ActiveModel::Serializer
         image = rails_blob_path(pi.image, only_path: true)
         {
           image_caption: pi.image_caption,
-          image: image
+          image: image,
+          id: pi.id
         }
       end 
       {
