@@ -19,6 +19,13 @@ class UserLinksController < ApplicationController
         render json: user_link 
     end 
 
+    def destroy 
+        user_link = UserLink.all.find(params[:id])
+        user_link.destroy
+
+        render json: user_link 
+    end
+
     private 
 
     def user_link_params 
