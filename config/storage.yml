@@ -13,6 +13,9 @@ amazon:
   region: "us-east-1"
   bucket: "tombardier-dev-demo"
 
+# AKIA5VV6ETO5YILISUGN
+
+# GHgqeNsS4JZO7JKUZExiUWJBJ59B/plrk2XipCRF
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
