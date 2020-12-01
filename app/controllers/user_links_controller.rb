@@ -1,5 +1,7 @@
 class UserLinksController < ApplicationController
 
+    # skip_before_action :authorized, only: [:destroy] 
+
     def index 
         user_links = UserLink.all 
 

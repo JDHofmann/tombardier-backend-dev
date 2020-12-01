@@ -16,7 +16,8 @@ class UsersController < ApplicationController
         render json: { user: current_user }, status: :accepted
     end
 
-    def update 
+    def update
+        # byebug 
         user = User.all.find(params[:id])
         user.update(user_params)
 
