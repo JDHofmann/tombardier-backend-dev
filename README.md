@@ -18,26 +18,9 @@ Simply run bundle install to install tombardier's frontend.
 bundle install
 ```
 
-# Image Storage
+# Getting Started with Tombardier Backend
 
-If you'd like to configure Tombardier with your own image storage, ensure you update all the files below:
-
-once you set up your cloud storage service:
-    - go to config/storage.yml 
-        - add your service underneath the local sections
-        - namespace all your details under a title for the serivice
-    - comment out config/environments/development
-        line 29:
-              config.active_storage.service = :local
-        - then add your servie title from config/storage.yml
-    - comment out config/environments/production
-        line 33:
-              config.active_storage.service = :local
-        - then add your servie title from config/storage.yml
-
-# Getting Started with Tombardier Front-End
-
-Start up your react app and enjoy
+Start up your rails server and enjoy
 
 ```bash
 rails s
