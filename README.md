@@ -12,7 +12,7 @@ Built with a Ruby on Rails API backend(this file), and a React/Redux front-end f
 
 Once you fork and clone this repo
 
-Simply run bundle install to install bestbey's frontend.
+Simply run bundle install to install tombardier's frontend.
 
 ```bash
 bundle install
