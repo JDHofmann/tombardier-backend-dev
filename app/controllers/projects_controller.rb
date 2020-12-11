@@ -19,6 +19,14 @@ class ProjectsController < ApplicationController
 
     def destroy 
         project = Project.all.find(params[:id])
+        project_images = ProjectImage.all.filter{|pi| pi.project_id == project.id}
+        project_images.each do |pi|
+            pi.destroy
+        end 
+        project_links = ProjectLink.all.filter{|pl| pl.project_id == project.id}
+        project_links.each do |pl|
+            pl.destroy
+        end
         project.destroy
         render json: project
     end 

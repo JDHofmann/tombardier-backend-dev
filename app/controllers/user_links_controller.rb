@@ -1,5 +1,7 @@
 class UserLinksController < ApplicationController
 
+    # skip_before_action :authorized, only: [:destroy] 
+
     def index 
         user_links = UserLink.all 
 
@@ -18,6 +20,13 @@ class UserLinksController < ApplicationController
 
         render json: user_link 
     end 
+
+    def destroy 
+        user_link = UserLink.all.find(params[:id])
+        user_link.destroy
+
+        render json: user_link 
+    end
 
     private 
 
