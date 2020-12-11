@@ -6,16 +6,6 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-amazon:
-  service: S3
-  access_key_id: "AKIA5VV6ETO53K2KQV4L"
-  secret_access_key: "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"
-  region: "us-east-1"
-  bucket: "tombardier-dev-demo"
-
-# AKIA5VV6ETO5YILISUGN
-
-# GHgqeNsS4JZO7JKUZExiUWJBJ59B/plrk2XipCRF
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
