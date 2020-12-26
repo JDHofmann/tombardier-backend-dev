@@ -7,7 +7,7 @@ class ProjectLinksController < ApplicationController
 
     def update 
         project_link = ProjectLink.all.find(params[:id])
-        project_link.update(user_link_params)
+        project_link.update(project_link_params)
 
         render json: project_link 
     end 
