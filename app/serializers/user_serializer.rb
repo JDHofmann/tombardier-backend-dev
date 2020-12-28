@@ -1,5 +1,4 @@
 class UserSerializer< ActiveModel::Serializer
-  # include JSONAPI::Serializer
   include Rails.application.routes.url_helpers
 
   attributes :id, :site_title, :site_subtitle, :email, :contact_email, :bio, :image, :user_projects, :user_links
